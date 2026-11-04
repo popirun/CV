@@ -134,32 +134,30 @@ ul li {
     margin-bottom: 10px;
 }
 @media (max-width: 768px) {
+    .container {
+        margin: 10px auto;
+        width: 100%;
+        border-radius: 0;
+    }
     header {
         flex-direction: column;
         text-align: center;
+        padding: 25px 15px;
     }
     .contact-info {
-        justify-content: center;
-        flex-direction: column; /* Apila los datos de contacto (teléfono, email) verticalmente */
+        flex-direction: column;
         align-items: center;
-        gap: 8px;
-    }
-    .right-column {
-        min-width: 100%;
-        padding: 25px 20px;
-    }
-    .container {
-        margin: 15px auto;
-        width: 95%;
-    }
-    .header-text h1 {
-        font-size: 2em; 
+        gap: 10px;
     }
     .main-content {
-        flex-direction: column; /* Fuerza a que la columna izquierda vaya arriba y la derecha abajo */
+        display: flex;
+        flex-direction: column; /* Fuerza a que sea una sola columna */
     }
-    .left-column {
-        min-width: 100%;
-        padding: 25px 20px;
+    .left-column, .right-column {
+        width: 100% !important;
+        min-width: 100% !important;
+        flex: none !important; /* Anula la proporción flex: 1 y flex: 2 */
+        padding: 20px !important;
+        box-sizing: border-box !important; /* Evita que el padding ensanche la caja */
     }
 }
