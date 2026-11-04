@@ -140,8 +140,26 @@ ul li {
     }
     .contact-info {
         justify-content: center;
+        flex-direction: column; /* Apila los datos de contacto (teléfono, email) verticalmente */
+        align-items: center;
+        gap: 8px;
     }
     .right-column {
         min-width: 100%;
+        padding: 25px 20px;
+    }
+    .container {
+        margin: 15px auto;
+        width: 95%;
+    }
+    .header-text h1 {
+        font-size: 2em; 
+    }
+    .main-content {
+        flex-direction: column; /* Fuerza a que la columna izquierda vaya arriba y la derecha abajo */
+    }
+    .left-column {
+        min-width: 100%;
+        padding: 25px 20px;
     }
 }
